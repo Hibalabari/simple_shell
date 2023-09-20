@@ -47,8 +47,10 @@ int main(int ac, char **argv)
 		}
 		argv[i] = NULL;
 		executee(argv);
+		free(argv);
+		free(bufferr_copy);
+		free(bufferr);
 	}
-	free(bufferr_copy);
-	free(bufferr);
+
 	return (0);
 }
