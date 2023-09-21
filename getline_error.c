@@ -5,19 +5,20 @@
  *
  * Return: numbre of characters typed
  */
-ssize_t getline_eror(void)
+char *getline_eror(void)
 {
 	char *bufferr = NULL;
 	size_t m = 0;
 	ssize_t characters_nb;
 
+	write(STDOUT_FILENO, "LBshell$ ", 9);
 	characters_nb = getline(&bufferr, &m, stdin);
 
 		if (characters_nb == -1)
 		{
-			printf("Exiting shell...byby ^^\n");
-			return (-1);
+			free(bufferr);
+			return (NULL);
 		}
-	return (characters_nb);
+	return (bufferr);
 }
 
