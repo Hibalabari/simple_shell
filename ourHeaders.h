@@ -17,7 +17,7 @@
 extern char **environ;
 char *getline_eror(void);
 
-char *_strdup(const char *str);
+char *myStrdup(const char *strr);
 int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
 char *_strcat(char *dest, char *src);

@@ -13,7 +13,7 @@ char **spliter(char *bufferr)
 
 	if (!bufferr)
 		return (NULL);
-	copy_buffer = strdup(bufferr);
+	copy_buffer = myStrdup(bufferr);
 	token = strtok(copy_buffer, DELIM);
 	if (token == NULL)
 	{
@@ -40,7 +40,7 @@ char **spliter(char *bufferr)
 	token = strtok(bufferr, DELIM);
 	while (token)
 	{
-		laCommande[j] = strdup(token);
+		laCommande[j] = myStrdup(token);
 		token = strtok(NULL, DELIM);
 		j++;
 	}
