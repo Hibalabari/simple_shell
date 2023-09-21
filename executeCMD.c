@@ -1,4 +1,11 @@
 #include "ourHeaders.h"
+/**
+ * cmd_execute - our main func
+ * @laCommande: array count
+ * @argv: null terminated array of strings
+ *
+ * Return: Always 0 on success, 1 on error
+ */
 int cmd_execute(char **laCommande, char **argv)
 {
 	pid_t fils;

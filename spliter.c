@@ -1,4 +1,10 @@
 #include "ourHeaders.h"
+/**
+ * spliter - our main func
+ * @bufferr: null terminated array of strings
+ *
+ * Return: Always 0 on success, 1 on error
+ */
 char **spliter(char *bufferr)
 {
 	char *token = NULL, *copy_buffer = NULL;
@@ -11,13 +17,13 @@ char **spliter(char *bufferr)
 	token = strtok(copy_buffer, DELIM);
 	if (token == NULL)
 	{
-		free (copy_buffer);
+		free(copy_buffer);
 		copy_buffer = NULL;
 		free (bufferr);
 		bufferr = NULL;
 		return(NULL);
 	}
-	while (token)
+	while(token)
 	{
 		compteur++;
 		token = strtok(NULL, DELIM);
@@ -38,8 +44,7 @@ char **spliter(char *bufferr)
 		token = strtok(NULL, DELIM);
 		j++;
 	}
-	free(bufferr);
-	bufferr = NULL;
+	free(bufferr), bufferr = NULL;
 	laCommande[j] = NULL;
-	return(laCommande);
+	return (laCommande);
 }
