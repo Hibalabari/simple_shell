@@ -18,13 +18,21 @@ extern char **environ;
 char *getline_eror(void);
 
 char *myStrdup(const char *strr);
-int _strcmp(char *s1, char *s2);
-int _strlen(char *s);
-char *_strcat(char *dest, char *src);
-char *_strcpy(char *dest, char *src);
+int strCompare(char *str1, char *str2);
+int getLongueur(char *str);
+char *strConcact(char *destination, char *orgin);
+char *_strCopy(char *destination, char *orgin);
 
 void emptytable(char **tableau);
-int cmd_execute(char **laCommande, char **argv);
+
+int cmd_execute(char **laCommande, char **argv, int id);
 char **spliter(char *bufferr);
+
+char *i_toa(int m);
+void inverser_strg(char *str, int longg);
+
+char *findEnv(char *x);
+char *myPath(char *laCommande);
+void errorMsg(char *nom, char *laCommande, int id);
 
 #endif

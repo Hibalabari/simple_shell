@@ -19,11 +19,11 @@ char **spliter(char *bufferr)
 	{
 		free(copy_buffer);
 		copy_buffer = NULL;
-		free (bufferr);
+		free(bufferr);
 		bufferr = NULL;
-		return(NULL);
+		return (NULL);
 	}
-	while(token)
+	while (token)
 	{
 		compteur++;
 		token = strtok(NULL, DELIM);
@@ -35,7 +35,7 @@ char **spliter(char *bufferr)
 	{
 		free(bufferr);
 		bufferr = NULL;
-		return(NULL);
+		return (NULL);
 	}
 	token = strtok(bufferr, DELIM);
 	while (token)
